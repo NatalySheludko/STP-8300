@@ -1,18 +1,83 @@
 @import './header.scss';
-@import './vite-promo.scss';
+@import './hero.css';
+@import './benefits.css';
+@import './feature-keys.css';
+@import './about.css';
+@import './how-play.css';
+@import './faq.css';
+@import './reviews.css';
+@import './gallery.css';
+@import './footer.css';
+@import './privacy-policy.css';
+@import './terms-conditions.css';
+@import './cookies-policy.css';
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+body {
+  // margin: 0;
+  // padding: 0;
+  // box-sizing: border-box;
+  background-color: #4ba1e2;
+  color: #2f2f2f;
+  font-family: 'Lora', sans-serif;
+  //font-family: "Baloo 2", sans-serif;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+p {
   font-weight: 400;
+  font-size: 12px;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  .section {
+    padding: 35px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 25px;
+  }
 }
