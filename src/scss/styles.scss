@@ -1,113 +1,117 @@
-@import './header.scss';
-@import './hero.css';
-@import './benefits.css';
-@import './feature-keys.css';
-@import './about.css';
-@import './how-play.css';
-@import './faq.css';
-@import './reviews.css';
-@import './gallery.css';
-@import './footer.css';
-@import './privacy-policy.css';
-@import './terms-conditions.css';
-@import './cookies-policy.css';
 @import './common/reset';
+@import './common/vars';
+@import './common/mixins';
+@import './common/visually-hidden';
+@import './header.scss';
+@import './hero.scss';
+@import './benefits.scss';
+@import './feature-keys.scss';
+@import './about.scss';
+@import './how-play.scss';
+@import './faq.scss';
+@import './reviews.scss';
+@import './gallery.scss';
+@import './footer.scss';
+@import './privacy-policy.scss';
+@import './terms-conditions.scss';
+@import './cookies-policy.scss';
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
-  background-color: #4ba1e2;
-  color: #2f2f2f;
-  font-family: 'Lora', sans-serif;
-  //font-family: "Baloo 2", sans-serif;
-
+  background-color: $_primary_bg;
+  color: $_main_color;
+  font-family: $_font_main;
   position: relative;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  @include scroll-bar;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 100%;
-  background: linear-gradient(to right, #77b8e9, #4ba1e2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
+body::before,
 body::after {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
   width: 30%;
   height: 100%;
-  background: linear-gradient(to left, #77b8e9, #4ba1e2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: -1;
 }
 
+body::before {
+  left: 0;
+  background: linear-gradient(to right, $_gradient, $_primary_bg);
+}
+
+body::after {
+  right: 0;
+  background: linear-gradient(to left, $_gradient, $_primary_bg);
+}
+
 .container {
-  max-width: 320px;
+  max-width: $_container-mobile;
   margin: 0 auto;
   padding: 0 10px;
+
+  @include media(desktop) {
+    max-width: $_container-desktop;
+    padding: 0 30px;
+  }
 }
 
 .section {
   padding: 20px 0;
+
+  @include media(desktop) {
+    padding: 35px 0;
+  }
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 24px;
+  @include font-weight(bold);
+  @include font(24);
   text-align: center;
+
+  @include media(desktop) {
+    @include font(40);
+    text-align: start;
+  }
 }
 
 h2 {
-  font-weight: 700;
-  font-size: 34px;
+  @include font-weight(bold);
+  @include font(34);
+
+  @include media(desktop) {
+    @include font(38);
+  }
 }
 
 h3 {
-  font-weight: 500;
-  font-size: 14px;
+  @include font-weight(medium);
+  @include font(14);
   text-align: center;
-  color: #fff;
+  color: $_white_text_color;
+
+  @include media(desktop) {
+    @include font(25);
+    text-align: start;
+  }
 }
 
 p {
-  font-weight: 400;
-  font-size: 12px;
-}
+  @include font-weight(normal);
+  @include font(12);
 
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-
-  .section {
-    padding: 35px 0;
-  }
-
-  h1 {
-    font-size: 40px;
-    text-align: start;
-  }
-
-  h2 {
-    font-size: 38px;
-  }
-
-  h3 {
-    font-size: 25px;
-    text-align: start;
-  }
-
-  p {
-    font-size: 25px;
+  @include media(desktop) {
+    @include font(25);
   }
 }

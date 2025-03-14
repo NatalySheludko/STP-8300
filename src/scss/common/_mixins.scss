@@ -1,41 +1,120 @@
 @use 'sass:math';
 @import './breakpoints';
-/*
-screen types: 
-    mobile,
-    to-tablet
-    tablet,
-    to-desktop
-    desktop,
-*/
+@import './vars';
+
 @mixin media($_screen) {
-  @if $_screen == mobile {
-    @media screen and (min-width: $mobile) {
-      @content;
+  $width: map-get($breakpoints, $_screen);
+
+  @if $width {
+    @if $_screen == mobile {
+      @media screen and (max-width: $width) {
+        @content;
+      }
     }
-  } @else if $_screen == to-tablet {
-    @media screen and (max-width: $to-tablet) {
-      @content;
+
+    @else if $_screen == tablet {
+      @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: $width) {
+        @content;
+      }
     }
-  } @else if $_screen == tablet {
-    @media screen and (min-width: $tablet) {
-      @content;
+
+    @else if $_screen == to-desktop {
+      @media screen and (max-width: $width) {
+        @content;
+      }
     }
-  } @else if $_screen == to-desktop {
-    @media screen and (max-width: $to-desktop) {
-      @content;
-    }
-  } @else if $_screen == desktop {
-    @media screen and (min-width: $desktop) {
-      @content;
+
+    @else if $_screen == desktop {
+      @media screen and (min-width: $width) {
+        @content;
+      }
     }
   }
 }
 
-@mixin font($_fsz, $_lnh) {
+@mixin font($_fsz, $_lnh: null) {
   font-size: #{$_fsz}px;
 
-  $result: math.div($_lnh, $_fsz);
+  @if $_lnh != null {
+    @if $_lnh > 10 {
+      // Якщо більше 10, сприймаємо як пікселі
+      line-height: math.div(math.round(math.div($_lnh, $_fsz) * 100), 100);
+    } @else {
+      // Якщо менше 10, сприймаємо як відсотки
+      line-height: #{math.div($_lnh * 100, 100)};
+    }
+  }
+}
 
-  line-height: math.div(math.round($result * 100), 100);
+@mixin font-weight($name) {
+  font-weight: map-get($font-weights, $name);
+}
+
+@mixin scroll-bar {
+  &::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: rgba($_white_text_color, 0.3);
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $_navbar_bg;
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: $_btn_color;
+    }
+  }
+}
+
+@mixin frame($width, $height: $width, $is-circle: false) {
+  width: $width;
+  height: $height;
+
+  @if $is-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+@mixin mq($bp: mobile, $type: min, $is-retina: false) {
+  @if map.has-key(var.$breakpoints, $bp) {
+    $width: map.get(var.$breakpoints, $bp);
+
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @if $is-retina {
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  } @else {
+    @error "Breakpoint not found: #{$bp}";
+  }
+}
+
+@mixin ease($speed, $property) {
+  transition: $property $speed;
 }
