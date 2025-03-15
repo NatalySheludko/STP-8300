@@ -1,7 +1,18 @@
+.header {
+  @include media(desktop) {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
 .container-nav {
   border-bottom: 3px solid $_border_color;
   width: 320px;
   background: $_header_bg;
+
   @include media(desktop) {
     border-bottom: unset;
     width: 1200px;
@@ -33,6 +44,7 @@
 }
 
 .header-logo {
+  background-color: $_common_img_bg;
   content: url('../img/logo-mobile.png');
 
   @include frame(48px, 48px, true);
