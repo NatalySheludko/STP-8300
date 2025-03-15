@@ -1,4 +1,54 @@
-$_main_color: #242424;
-$_main_bg_color: rgba(255, 255, 255, 0.87);
-$_header_color: #747bff;
-$_header_accent_color: red;
+// Colors
+$_main_color: #2f2f2f;
+$_white_text_color: #fff;
+$_logo_color: #232323;
+$_dark_bg: #000;
+$_primary_bg: #4ba1e2;
+$_gradient: #77b8e9;
+$_header_bg: linear-gradient(180deg, #1077f2 88%, #95aecd 95%);
+$_common_img_bg: #95aecd;
+$_border_color: rgba(255, 255, 255, 0.65);
+$_btn_color: #4b7afd;
+$_navbar_bg: #f0f0f0;
+$_box_bg: rgba(225, 238, 255, 0.15);
+$_second_box_bg: rgba(101, 168, 251, 0.15);
+$_icon_stroke_color: #4d4d4d;
+$_transparent_color: transparent;
+$_current_color: currentColor;
+
+//Shadow
+$_box_shadow: inset 0 0 68px 0 rgba(255, 255, 255, 0.05),
+  inset 0 0 4px 0 rgba(255, 255, 255, 0.15);
+
+// Fonts
+$_font_main: 'Lora', sans-serif;
+$_font_alt: 'Baloo 2', sans-serif;
+
+// Containers
+$_container-mobile: 320px;
+$_container-desktop: 1200px;
+
+// Font-weights
+$font-weights: (
+  'extralight': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+);
+
+// Borders
+$border-thin: 5px;
+$border-medium: 8px;
+$border-semi-bold: 9px;
+$border-bold: 10px;
+$border-thick: 15px;
+$border-extra-thick: 24px;
+
+// Easings
+$easings: (
+  'fast': 300ms ease,
+  'slow': 600ms ease,
+);
