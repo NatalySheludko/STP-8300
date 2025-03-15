@@ -1,0 +1,26 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-dote" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="5.8182" d="M16 29.091c3.472 0 6.802-1.379 9.257-3.834s3.834-5.785 3.834-9.257c0-3.472-1.379-6.802-3.834-9.257s-5.785-3.834-9.257-3.834c-3.472 0-6.802 1.379-9.257 3.834s-3.834 5.785-3.834 9.257c0 3.472 1.379 6.802 3.834 9.257s5.785 3.834 9.257 3.834z"></path>
+</symbol>
+<symbol id="icon-arrow" viewBox="0 0 32 32">
+<path d="M16 5.12c6.016 0 10.88 4.864 10.88 10.88s-4.864 10.88-10.88 10.88c-6.016 0-10.88-4.864-10.88-10.88s4.864-10.88 10.88-10.88zM16 25.6c5.312 0 9.6-4.288 9.6-9.6s-4.288-9.6-9.6-9.6c-5.312 0-9.6 4.288-9.6 9.6s4.288 9.6 9.6 9.6z"></path>
+<path d="M16.192 9.792l0.896 0.896-5.312 5.312 5.312 5.312-0.896 0.896-6.208-6.208 6.208-6.208z"></path>
+<path d="M21.76 16.64h-10.88v-1.28h10.88v1.28z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path fill="none" stroke="#4d4d4d" style="stroke: var(--color1, #4d4d4d)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.0114" d="M16 2.462v27.077M2.462 16h27.077"></path>
+</symbol>
+<symbol id="icon-minus" viewBox="0 0 32 32">
+<path fill="none" stroke="#4d4d4d" style="stroke: var(--color1, #4d4d4d)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5" d="M4 16h24"></path>
+</symbol>
+<symbol id="icon-border-dote" viewBox="0 0 32 32">
+<path d="M16 32c4.243 0 8.313-1.686 11.314-4.686s4.686-7.070 4.686-11.314-1.686-8.313-4.686-11.314c-3.001-3.001-7.070-4.686-11.314-4.686s-8.313 1.686-11.314 4.686c-3.001 3.001-4.686 7.070-4.686 11.314s1.686 8.313 4.686 11.314c3.001 3.001 7.070 4.686 11.314 4.686zM26.44 16c0 2.769-1.1 5.424-3.058 7.382s-4.613 3.058-7.382 3.058c-2.769 0-5.424-1.1-7.382-3.058s-3.058-4.613-3.058-7.382c0-2.769 1.1-5.424 3.058-7.382s4.613-3.058 7.382-3.058c2.769 0 5.424 1.1 7.382 3.058s3.058 4.613 3.058 7.382z"></path>
+</symbol>
+<symbol id="icon-burger" viewBox="0 0 32 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M30.857 2.286h-29.714"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M30.857 16h-20.571"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M30.857 29.714h-24"></path>
+</symbol>
+</defs>
+</svg>
