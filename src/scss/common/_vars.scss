@@ -1,6 +1,7 @@
 // Colors
 $_main_color: #2f2f2f;
 $_white_text_color: #fff;
+$_logo_color: #232323;
 $_dark_bg: #000;
 $_primary_bg: #4ba1e2;
 $_gradient: #77b8e9;
@@ -36,6 +37,14 @@ $font-weights: (
   'bold': 700,
   'extrabold': 800,
 );
+
+// Borders
+$border-thin: 5px;
+$border-medium: 8px;
+$border-semi-bold: 9px;
+$border-bold: 10px;
+$border-thick: 15px;
+$border-extra-thick: 24px;
 
 // Easings
 $easings: (
