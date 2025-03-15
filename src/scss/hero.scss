@@ -1,0 +1,105 @@
+.container-hero {
+  position: relative;
+  background-image: url('../img/hero/hero-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 320px;
+  height: 389px;
+  margin: 0 auto;
+  background-color: $_common_img_bg;
+
+  @include mq(mobile, min, true) {
+    background-image: url('../img/hero/hero-mobile@2x.png');
+  }
+
+  @include media(desktop) {
+    max-width: 1200px;
+    height: 700px;
+
+    @include mq(desktop, min) {
+      background-image: url('../img/hero/hero-desktop.png');
+    }
+    @include mq(desktop, min, true) {
+      background-image: url('../img/hero/hero-desktop@2x.png');
+    }
+  }
+}
+
+.content-position {
+  position: absolute;
+  top: 404px;
+
+  @include media(desktop) {
+    position: unset;
+    top: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 177px 5px 90px 524px;
+  }
+}
+
+.hero-title {
+  margin-bottom: 15px;
+  @include media(desktop) {
+    margin-bottom: 30px;
+    width: 611px;
+  }
+}
+
+.hero-text {
+  padding: 9px 5px 9px 4px;
+  text-align: center;
+  border-radius: $border-thick;
+  width: 300px;
+  backdrop-filter: blur(43px);
+  box-shadow: $_box_shadow;
+  background: $_box_bg;
+
+  @include font(14);
+
+  @include media(desktop) {
+    width: 537px;
+    margin-bottom: 84px;
+  }
+}
+
+.hero-google-play-box {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    border: 1px solid $_dark_bg;
+    border-radius: $border-bold;
+    padding: 10px 20px;
+    background-color: $_white_text_color;
+  }
+}
+
+.hero-google-play-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: $_dark_bg;
+
+  @include font(26);
+  @include font-weight(bold);
+}
+
+.hero-google-play-visual {
+  @include media(desktop) {
+    margin-right: 10px;
+    width: 25px;
+    height: 27px;
+
+    @include mq(desktop, min) {
+      content: url('../img/hero/google-logo.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/hero/google-logo@2x.png');
+    }
+  }
+}
