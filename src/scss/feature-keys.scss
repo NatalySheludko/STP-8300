@@ -1,0 +1,23 @@
+.feature-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon-dote {
+  margin-right: 10px;
+
+  @include media(desktop) {
+    margin-left: 10px;
+  }
+}
+
+.feature-menu-item-text {
+  @include media(desktop) {
+    @include font(24, 1.41);
+  }
+}
