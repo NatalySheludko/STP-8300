@@ -1,0 +1,44 @@
+.about-container {
+  @include media(desktop) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about-visual {
+  margin: 0 auto;
+  width: 280px;
+  height: 390px;
+  margin-bottom: 15px;
+  border-radius: $border-medium;
+  background-color: $_common_img_bg;
+  content: url('../img/about/about-mobile.png');
+
+  @include mq(mobile, min, true) {
+    content: url('../img/about/about-mobile@2x.png');
+  }
+
+  @include media(desktop) {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    border-radius: $border-bold;
+    width: 350px;
+    height: 490px;
+    @include mq(desktop, min) {
+      content: url('../img/about/about-desktop.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/about/about-desktop@2x.png');
+    }
+  }
+}
+
+.about-text {
+  padding: 0 4px;
+  @include media(desktop) {
+    width: 597px;
+    padding-bottom: 104px;
+  }
+}
