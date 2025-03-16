@@ -89,21 +89,21 @@ h1 {
 h2 {
   @include font-weight(bold);
   @include font(34);
+  text-align: center;
 
   @include media(desktop) {
     @include font(38);
+    text-align: start;
   }
 }
 
 h3 {
   @include font-weight(medium);
   @include font(14);
-  text-align: center;
   color: $_white_text_color;
 
   @include media(desktop) {
     @include font(25);
-    text-align: start;
   }
 }
 
