@@ -61,7 +61,7 @@
   @include font(14);
 
   @include media(desktop) {
-    width: 537px;
+    width: 460px;
     margin-bottom: 84px;
   }
 }
@@ -101,5 +101,120 @@
     @include mq(desktop, min, true) {
       content: url('../img/hero/google-logo@2x.png');
     }
+  }
+}
+
+/* ANIMATED BLOCK */
+.animated-block {
+  position: relative;
+}
+
+.overlay-block {
+  position: absolute;
+  padding: 10px 10px 30px 10px;
+  width: 320px;
+  height: 333px;
+  background-color: $_white_text_color;
+  bottom: -100%;
+  left: 48.5%;
+  transform: translateX(-50%) translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  @include media(desktop) {
+    padding: 31px 225px;
+    width: 1200px;
+    height: 358px;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-71.7%) translateY(52%);
+  }
+}
+
+.overlay-block.visible {
+  transform: translateX(-50.1%) translateY(0%);
+  opacity: 1;
+  visibility: visible;
+
+  @include media(desktop) {
+    transform: translateX(-71.7%) translateY(-48%);
+  }
+}
+
+.overlay-title {
+  color: $_dark_bg;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @include font(30);
+
+  @include media(desktop) {
+    margin-bottom: 6px;
+
+    @include font(64);
+  }
+}
+
+.overlay-text {
+  color: $_dark_bg;
+  margin-bottom: 40px;
+
+  @include font(12, 1.5);
+
+  @include media(desktop) {
+    margin-bottom: 60px;
+
+    @include font(24, 1.5);
+  }
+}
+
+.overlay-btns-box {
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.overlay-btn-info {
+  border-radius: $border-semi-bold;
+  padding: 16px 86px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  border: none;
+  color: $_white_text_color;
+  background-color: $_btn_color;
+
+  @include font-weight(normal);
+  @include font(18);
+
+  @include media(desktop) {
+    border-radius: $border-bold;
+    padding: 18px 95px;
+    margin-bottom: 0;
+
+    @include font(20);
+  }
+}
+
+.overlay-btn-frame {
+  border: 1.36px solid $_btn_color;
+  border-radius: $border-semi-bold;
+  padding: 16px 82px;
+  white-space: nowrap;
+  color: $_dark_bg;
+  background-color: $_transparent_color;
+
+  @include font-weight(normal);
+  @include font(18);
+
+  @include media(desktop) {
+    border: 1.5px solid $_btn_color;
+    border-radius: $border-bold;
+    padding: 18px 91px;
+
+    @include font(20);
   }
 }
