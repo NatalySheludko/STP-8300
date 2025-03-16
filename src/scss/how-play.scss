@@ -1,0 +1,162 @@
+.how-play-slide {
+  margin: 0 auto;
+  width: 280px;
+  height: 392px;
+  border-radius: $border-medium;
+  background-color: $_common_img_bg;
+
+  @include media(desktop) {
+    border-radius: $border-bold;
+    width: 350px;
+    height: 490px;
+  }
+}
+.slide1 {
+  content: url('../img/how-play/how-play-mobile1.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile1@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop1.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop1@2x.png');
+    }
+  }
+}
+.slide2 {
+  content: url('../img/how-play/how-play-mobile2.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile2@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop2.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop2@2x.png');
+    }
+  }
+}
+.slide3 {
+  content: url('../img/how-play/how-play-mobile3.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile3@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop3.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop3@2x.png');
+    }
+  }
+}
+.slide4 {
+  content: url('../img/how-play/how-play-mobile4.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile4@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop4.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop4@2x.png');
+    }
+  }
+}
+.slide5 {
+  content: url('../img/how-play/how-play-mobile5.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile5@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop5.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop5@2x.png');
+    }
+  }
+}
+// .how-to-play {
+//   text-align: center;
+//   padding: 40px 20px;
+// }
+
+// .swiper {
+//   width: 80%;
+//   max-width: 900px;
+//   margin: auto;
+// }
+
+// .swiper-slide {
+//   border-radius: 10px;
+//   padding: 15px;
+//   text-align: center;
+// }
+
+// .swiper-slide img {
+//   width: 100%;
+//   border-radius: 10px;
+// }
+
+// .swiper-pagination {
+//   bottom: 10px !important;
+// }
+// .how-to-play {
+//   background-color: $bg-color;
+//   text-align: center;
+//   padding: 40px 20px;
+
+//   h2 {
+//     font-size: 32px;
+//     color: $text-color;
+//     margin-bottom: 20px;
+//   }
+
+//   .swiper {
+//     width: 100%;
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding-bottom: 40px;
+//   }
+
+//   .swiper-slide {
+//     background: $swiper-bg;
+//     border-radius: $swiper-border-radius;
+//     padding: 20px;
+
+//     img {
+//       max-width: 100%;
+//       border-radius: 10px;
+//     }
+
+//     p {
+//       font-size: 16px;
+//       color: $text-color;
+//       margin-top: 10px;
+//     }
+//   }
+
+//   .swiper-pagination {
+//     position: relative;
+//     bottom: 0;
+//     margin-top: 20px;
+
+//     .swiper-pagination-bullet {
+//       width: 10px;
+//       height: 10px;
+//       //   background-color: rgba(255, 255, 255, 0.5);
+//       opacity: 1;
+//       transition: 0.3s;
+//     }
+
+//     .swiper-pagination-bullet-active {
+//       background-color: black;
+//       transform: scale(1.3);
+//     }
+//   }
+// }
