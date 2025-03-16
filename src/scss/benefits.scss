@@ -1,0 +1,67 @@
+.benefits-section {
+  margin-top: 340px;
+
+  @include media(desktop) {
+    margin-top: 0px;
+  }
+}
+
+.benefits-container {
+  position: relative;
+  background-image: url('../img/benefits/benefits-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 35px;
+
+  @include mq(mobile, min, true) {
+    background-image: url('../img/benefits/benefits-mobile@2x.png');
+  }
+
+  @include media(desktop) {
+    max-width: 1200px;
+
+    @include mq(desktop, min) {
+      background-image: url('../img/benefits/benefits-desktop.png');
+    }
+    @include mq(desktop, min, true) {
+      background-image: url('../img/benefits/benefits-desktop@2x.png');
+    }
+  }
+}
+
+.benefits-title {
+  @include media(desktop) {
+    padding-top: 50px;
+  }
+}
+
+.benefits-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.benefits-menu-item {
+  border-radius: $border-thick;
+  padding: 10px 6px;
+  backdrop-filter: blur(43px);
+  box-shadow: $_box_shadow;
+  background: $_box_bg;
+
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+  }
+}
+
+.benefits-icon-dote {
+  display: none;
+  @include media(desktop) {
+    display: block;
+    margin-right: 29px;
+  }
+}
