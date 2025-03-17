@@ -1,71 +1,87 @@
+.privacy-link {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  @include font-weight(semibold);
+  @include font(20);
+}
+
+.privacy-link-icon {
+  margin-right: 15px;
+}
+
 .title-pages {
   @include font-weight(bold);
   @include font(34);
   text-align: start;
-  margin: 0 auto;
+  padding-top: 93px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+
   @include media(desktop) {
+    padding-top: 103px;
+    margin-bottom: 25px;
     @include font(38);
   }
 }
+
 .second-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: start;
-  margin: o auto 15px auto;
-  padding-left: 0;
+  width: 260px;
+  margin: 0 auto 15px auto;
+
+  @include media(desktop) {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+}
+
+.text {
+  @include font-weight(medium);
+  @include font(12);
+
+  @include media(desktop) {
+    @include font(25);
+  }
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.text-spacing {
+  margin-bottom: 30px;
+  @include media(desktop) {
+    margin-bottom: 55px;
+  }
+}
+
+.text-small-spacing {
+  margin-bottom: 10px;
   @include media(desktop) {
     margin-bottom: 25px;
   }
 }
-.text {
-  @include font-weight(medium);
-  @include font(12);
-  @include media(desktop) {
-    @include font(25);
-  }
-}
-// ========================
-.footer {
-  background-color: $_dark_bg;
-}
-.text-footer {
-  color: $_white_text_color;
-  text-align: center;
-  @include font-weight(medium);
-  @include font(14);
-  @include media(desktop) {
-    @include font(25);
-  }
-}
-.title-footer {
-  text-align: center;
-}
-.footer-container {
-  position: relative;
-  padding-top: 18px;
-  padding-bottom: 20px;
-  @include media(desktop) {
-    padding-top: 20px;
-    padding-bottom: 41px;
-  }
-}
-.footer-item-right {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-  @include media(desktop) {
-    position: relative;
-    right: unset;
-    top: unset;
-  }
-}
-.list-footer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 23px;
-  margin-bottom: 22px;
-  @include media(desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 36px;
-    row-gap: unset;
-  }
-}
+
+// через класс
+// ul {
+//   list-style-type: disc;
+//   padding-left: 20px;
+// }
+// a {
+//   text-decoration: underline;
+
+// }
+
+// a:hover {
+//   text-decoration: none;
+// }

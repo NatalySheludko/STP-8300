@@ -1,0 +1,66 @@
+.privacy-link {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  @include font-weight(semibold);
+  @include font(20);
+}
+
+.privacy-link-icon {
+  margin-right: 15px;
+}
+
+.title-pages {
+  @include font-weight(bold);
+  @include font(34);
+  text-align: start;
+  padding-top: 93px;
+  margin: 0 auto 15px auto;
+  display: flex;
+  justify-content: center;
+
+  @include media(desktop) {
+    padding-top: 103px;
+    margin-bottom: 25px;
+    @include font(38);
+  }
+}
+
+.second-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 260px;
+  margin: 0 auto 15px auto;
+
+  @include media(desktop) {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+}
+
+.text {
+  @include font-weight(medium);
+  @include font(12);
+
+  @include media(desktop) {
+    @include font(25);
+  }
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.text-spacing {
+  margin-bottom: 30px;
+  @include media(desktop) {
+    margin-bottom: 55px;
+  }
+}
