@@ -3,6 +3,26 @@
   flex-direction: column;
 }
 
+.feature-menu-list {
+  position: relative;
+  padding-left: 20px;
+}
+
+.feature-menu-list::before {
+  content: '·';
+  position: absolute;
+  left: 5px;
+  top: 25%;
+  transform: translateY(-50%);
+  @include font(34);
+  color: $_dark_bg;
+  @include media(desktop) {
+    @include font(60);
+    left: 0;
+    top: 40%;
+  }
+}
+
 .feature-menu-item {
   display: flex;
   align-items: center;

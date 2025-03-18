@@ -112,7 +112,7 @@
 .overlay-block {
   position: absolute;
   padding: 10px 10px 30px 10px;
-  width: 320px;
+  width: 321px;
   height: 333px;
   background-color: $_white_text_color;
   bottom: -100%;
@@ -126,7 +126,7 @@
   @include media(desktop) {
     padding: 31px 225px;
     width: 1200px;
-    height: 358px;
+    height: 360px;
     top: 0%;
     left: 0%;
     transform: translateX(-71.7%) translateY(52%);
@@ -134,12 +134,12 @@
 }
 
 .overlay-block.visible {
-  transform: translateX(-50.1%) translateY(0%);
+  transform: translateX(-50.1%) translateY(-10%);
   opacity: 1;
   visibility: visible;
 
   @include media(desktop) {
-    transform: translateX(-71.7%) translateY(-48%);
+    transform: translateX(-71.6%) translateY(-48%);
   }
 }
 
