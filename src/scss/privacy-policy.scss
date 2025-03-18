@@ -1,39 +1,9 @@
-.privacy-link {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  @include font-weight(semibold);
-  @include font(20);
-}
-
-.privacy-link-icon {
-  margin-right: 15px;
-}
-
-.title-pages {
-  @include font-weight(bold);
-  @include font(34);
-  text-align: start;
-  padding-top: 93px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-
-  @include media(desktop) {
-    padding-top: 103px;
-    margin-bottom: 25px;
-    @include font(38);
-  }
-}
-
-.second-title {
+.privacy-second-title {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: start;
-  width: 260px;
+  width: 255px;
   margin: 0 auto 15px auto;
 
   @include media(desktop) {
@@ -43,25 +13,17 @@
   }
 }
 
-.text {
-  @include font-weight(medium);
-  @include font(12);
-
+.privacy-title-size {
+  width: 236px;
   @include media(desktop) {
-    @include font(25);
+    width: auto;
   }
 }
 
-.text-item {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.text-spacing {
-  margin-bottom: 30px;
+.privacy-next-title-size {
+  width: 191px;
   @include media(desktop) {
-    margin-bottom: 55px;
+    width: auto;
   }
 }
 
@@ -70,21 +32,4 @@
   @include media(desktop) {
     margin-bottom: 25px;
   }
-}
-
-// через класс
-// ul {
-//   list-style-type: disc;
-//   padding-left: 20px;
-// }
-// a {
-//   text-decoration: underline;
-
-// }
-
-// a:hover {
-//   text-decoration: none;
-// }
-.underline {
-  text-decoration: underline;
 }
