@@ -1,0 +1,35 @@
+.privacy-second-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 255px;
+  margin: 0 auto 15px auto;
+
+  @include media(desktop) {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+}
+
+.privacy-title-size {
+  width: 236px;
+  @include media(desktop) {
+    width: auto;
+  }
+}
+
+.privacy-next-title-size {
+  width: 191px;
+  @include media(desktop) {
+    width: auto;
+  }
+}
+
+.text-small-spacing {
+  margin-bottom: 10px;
+  @include media(desktop) {
+    margin-bottom: 25px;
+  }
+}
