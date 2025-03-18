@@ -1,1 +1,156 @@
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  margin: 0 auto;
+  width: 280px;
+  height: 392px;
+  margin-bottom: 15px;
+  border-radius: $border-medium;
+  background-color: $_common_img_bg;
+  @include media(desktop) {
+    margin-bottom: 25px;
+    border-radius: $border-bold;
+    width: 350px;
+    height: 490px;
+  }
+}
 
+.slide1 {
+  content: url('../img/how-play/how-play-mobile1.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile1@2x.png');
+  }
+
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop1.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop1@2x.png');
+    }
+  }
+}
+
+.slide2 {
+  content: url('../img/how-play/how-play-mobile2.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile2@2x.png');
+  }
+
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop2.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop2@2x.png');
+    }
+  }
+}
+
+.slide3 {
+  content: url('../img/how-play/how-play-mobile3.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile3@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop3.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop3@2x.png');
+    }
+  }
+}
+
+.slide4 {
+  content: url('../img/how-play/how-play-mobile4.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile4@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop4.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop4@2x.png');
+    }
+  }
+}
+
+.slide5 {
+  content: url('../img/how-play/how-play-mobile5.png');
+  @include mq(mobile, min, true) {
+    content: url('../img/how-play/how-play-mobile5@2x.png');
+  }
+  @include media(desktop) {
+    @include mq(desktop, min) {
+      content: url('../img/how-play/how-play-desktop5.png');
+    }
+    @include mq(desktop, min, true) {
+      content: url('../img/how-play/how-play-desktop5@2x.png');
+    }
+  }
+}
+
+.swiper {
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.custom-slide-container {
+  @include media(desktop) {
+    padding: 24px 0 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 70px; // Відстань між елементами
+    column-gap: 190px; // Відстань між елементами
+  }
+}
+
+.custom-slide {
+  @include media(desktop) {
+    width: calc(50% - 15px);
+    max-width: 458px;
+    margin-bottom: 25px;
+  }
+}
+
+.custom-slide:nth-child(5) {
+  @include media(desktop) {
+    flex-basis: 100%; // П'ятий слайд займає весь ряд
+    // Максимальний розмір
+    // Відступ зверху для п'ятого слайду
+  }
+}
+
+.slide-text {
+  text-align: center;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.swiper-pagination {
+  @include media(desktop) {
+    display: none;
+  }
+}
