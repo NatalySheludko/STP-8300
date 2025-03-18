@@ -15,6 +15,7 @@
 @import './privacy-policy.scss';
 @import './terms-conditions.scss';
 @import './cookies-policy.scss';
+@import './footer-docs.scss';
 
 :root {
   font-synthesis: none;
@@ -150,7 +151,6 @@ p {
 }
 
 .footer-container {
-  position: relative;
   padding-top: 18px;
   padding-bottom: 20px;
   @include media(desktop) {
@@ -159,14 +159,15 @@ p {
   }
 }
 
+.nav-footer {
+  position: relative;
+}
+
 .list-footer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 22px;
   row-gap: 23px;
   @include media(desktop) {
-    flex-direction: row;
     margin-bottom: 36px;
     row-gap: unset;
   }
@@ -174,13 +175,17 @@ p {
 
 .footer-item-right {
   position: absolute;
-  right: 10px;
-  top: 18px;
+  right: 0;
+  top: 0;
   @include media(desktop) {
     position: relative;
     right: unset;
     top: unset;
   }
+}
+
+.title-footer {
+  text-align: start;
 }
 
 .text-footer {
