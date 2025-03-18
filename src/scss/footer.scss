@@ -1,6 +1,7 @@
 .footer {
   background-color: $_dark_bg;
 }
+
 .text-footer {
   color: $_white_text_color;
   text-align: center;
@@ -10,9 +11,11 @@
     @include font(25);
   }
 }
+
 .title-footer {
   text-align: center;
 }
+
 .footer-container {
   position: relative;
   padding-top: 18px;
@@ -22,6 +25,7 @@
     padding-bottom: 41px;
   }
 }
+
 .footer-item-right {
   position: absolute;
   right: 10px;
@@ -32,6 +36,7 @@
     top: unset;
   }
 }
+
 .list-footer {
   display: flex;
   flex-direction: column;
