@@ -1,0 +1,90 @@
+.privacy-link {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 3px;
+  @include font-weight(semibold);
+  @include font(20);
+
+  @include media(desktop) {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.privacy-link-icon {
+  margin-right: 15px;
+}
+
+.title-pages {
+  @include font-weight(bold);
+  @include font(34);
+  text-align: start;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+
+  @include media(desktop) {
+    padding-top: 98px;
+    margin-bottom: 25px;
+    @include font(38);
+  }
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.text {
+  @include font-weight(medium);
+  @include font(12);
+
+  @include media(desktop) {
+    @include font(25);
+  }
+}
+
+.list-title {
+  position: relative;
+  padding-left: 20px;
+  display: inline-flex;
+  @include media(desktop) {
+    padding-left: 45px;
+  }
+}
+
+.list-title::before {
+  content: '·';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include font(34);
+  color: $_dark_bg;
+  @include media(desktop) {
+    @include font(60);
+    left: 20px;
+  }
+}
+
+.text-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  @include media(desktop) {
+    padding-left: 40px;
+  }
+}
+
+.text-spacing {
+  margin-bottom: 30px;
+  @include media(desktop) {
+    margin-bottom: 55px;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
