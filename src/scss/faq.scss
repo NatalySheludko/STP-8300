@@ -1,0 +1,87 @@
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+
+  @include media(desktop) {
+    padding: 0 75px;
+  }
+}
+
+.accordion {
+  width: 300px;
+  padding: 11px 5px;
+  border-radius: $border-bold;
+  background-color: $_white_text_color;
+
+  @include media(desktop) {
+    width: 1050px;
+    padding: 9px 20px;
+  }
+}
+
+.accordion-text {
+  @include font-weight(medium);
+  @include font(12, 1.5);
+  color: $_icon_stroke_color;
+
+  @include media(desktop) {
+    @include font(25);
+  }
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 0;
+  background-color: $_transparent_color;
+  @include font-weight(medium);
+  @include font(12, 1.5);
+  color: $_icon_stroke_color;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media(desktop) {
+    @include font(25);
+  }
+}
+
+.icon-minus {
+  display: none;
+  width: 12px;
+  height: 12px;
+
+  @include media(desktop) {
+    width: 31.5px;
+    height: 31.5px;
+  }
+}
+
+.icon-plus {
+  width: 11px;
+  height: 11px;
+
+  @include media(desktop) {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.accordion.active .icon-minus {
+  display: inline;
+}
+
+.accordion.active .icon-plus {
+  display: none;
+}
+
+.accordion-panel {
+  display: none;
+}
+
+.accordion.active .accordion-panel {
+  display: block;
+}
