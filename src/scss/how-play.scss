@@ -115,8 +115,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 70px; // Відстань між елементами
-    column-gap: 190px; // Відстань між елементами
+    row-gap: 70px;
+    column-gap: 190px;
   }
 }
 
@@ -130,9 +130,7 @@
 
 .custom-slide:nth-child(5) {
   @include media(desktop) {
-    flex-basis: 100%; // П'ятий слайд займає весь ряд
-    // Максимальний розмір
-    // Відступ зверху для п'ятого слайду
+    flex-basis: 100%;
   }
 }
 

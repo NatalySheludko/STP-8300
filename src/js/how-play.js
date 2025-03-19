@@ -13,30 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            renderBullet: function (index, className) {
-              return `
-                <svg class="${className}" width="8" height="8">
-                  <use href="./img/sprite.svg#${
-                    index === this.realIndex ? 'icon-dote' : 'icon-border-dote'
-                  }"></use>
-                </svg>`;
-            },
-          },
-          on: {
-            slideChange: function () {
-              document
-                .querySelectorAll('.swiper-pagination svg use')
-                .forEach((useEl, index) => {
-                  useEl.setAttribute(
-                    'href',
-                    `./img/sprite.svg#${
-                      index === this.realIndex
-                        ? 'icon-dote'
-                        : 'icon-border-dote'
-                    }`
-                  );
-                });
-            },
           },
         });
       }
@@ -48,9 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Викликаємо при завантаженні
   initSwiper();
 
-  // Відстежуємо зміну розміру екрана
   window.addEventListener('resize', initSwiper);
 });
