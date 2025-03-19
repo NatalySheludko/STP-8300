@@ -3,13 +3,16 @@
   background-image: url('../img/reviews/reviews-mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom 30px;
+  max-width: 320px;
+  margin: 0 auto;
 
   @include mq(mobile, min, true) {
     background-image: url('../img/reviews/reviews-mobile@2x.png');
   }
 
   @include media(desktop) {
+    background-position: center bottom 0;
     max-width: 1200px;
 
     @include mq(desktop, min) {
@@ -20,57 +23,76 @@
     }
   }
 }
-.reviews-section {
-  margin-top: 40px;
+
+.reviews-custom-slide-container {
+  @include media(desktop) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+.review-slide {
+  padding: 30px 28px 0px 29px;
+  height: 226px;
+  width: 243px;
+  border-radius: $border-bold;
+  backdrop-filter: blur(43px);
+  box-shadow: $_box_shadow;
+  background: $_box_bg;
 
   @include media(desktop) {
-    margin-top: 0px;
+    padding: 30px 31px 0px 31px;
+    height: 256px;
+  }
+}
+
+.swiper-slide {
+  @include media(desktop) {
+    max-width: 320px;
   }
 }
 
 .reviews-title {
-  margin-bottom: 57px;
+  margin-bottom: 56px;
 
   @include media(desktop) {
     margin-bottom: 25px;
   }
 }
 
-.review-slide {
-  width: 300px;
-  height: 226px;
-  border-radius: $border-thick;
-  padding: 30px 28px;
-  backdrop-filter: blur(43px);
-  box-shadow: $_box_shadow;
-  background: $_box_bg;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-}
-
 .review-text {
+  color: $_dark_bg;
+  width: 243px;
+
   @include font(20);
   @include font-weight(normal);
 }
 
 .review-author {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 14px;
-  margin-top: auto;
+  bottom: 10px;
+  left: 10px;
 }
 
 .review-name {
+  color: $_dark_gray_color;
+
   @include font(20);
   @include font-weight(semibold);
+
   @include media(desktop) {
     @include font(25);
   }
 }
-// avatars
+
+/* AVATAR IMG */
 .review-avatar1,
 .review-avatar2,
 .review-avatar3,
@@ -78,19 +100,24 @@
 .review-avatar5 {
   width: 55px;
   height: 55px;
-  border-radius: 50%;
   object-fit: cover;
+
+  @include frame(55px, 55px, true);
 
   @include media(desktop) {
     width: 60px;
     height: 60px;
+    @include frame(60px, 60px, true);
   }
 }
+
 .review-avatar1 {
   content: url('../img/reviews/reviews-mobile1.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/reviews/reviews-mobile1@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/reviews/reviews-desktop1.png');
@@ -100,11 +127,14 @@
     }
   }
 }
+
 .review-avatar2 {
   content: url('../img/reviews/reviews-mobile2.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/reviews/reviews-mobile2@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/reviews/reviews-desktop2.png');
@@ -114,11 +144,14 @@
     }
   }
 }
+
 .review-avatar3 {
   content: url('../img/reviews/reviews-mobile3.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/reviews/reviews-mobile3@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/reviews/reviews-desktop3.png');
@@ -128,11 +161,13 @@
     }
   }
 }
+
 .review-avatar4 {
   content: url('../img/reviews/reviews-mobile4.png');
   @include mq(mobile, min, true) {
     content: url('../img/reviews/reviews-mobile4@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/reviews/reviews-desktop4.png');
@@ -142,11 +177,14 @@
     }
   }
 }
+
 .review-avatar5 {
   content: url('../img/reviews/reviews-mobile5.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/reviews/reviews-mobile5@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/reviews/reviews-desktop5.png');
@@ -156,30 +194,3 @@
     }
   }
 }
-
-// ??????????????
-// .reviews-custom-slide-container {
-//   @include media(desktop) {
-//     padding: 24px 0 70px 0;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     row-gap: 70px;
-//     column-gap: 190px;
-//   }
-// }
-// ================
-// .custom-slide {
-//   @include media(desktop) {
-//     position: relative;
-//     width: calc(50% - 15px);
-//     max-width: 350px;
-//     margin-bottom: 70px;
-//   }
-// }
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// .custom-slide:nth-child(5) {
-//   @include media(desktop) {
-//     flex-basis: 100%;
-//   }
-// }
