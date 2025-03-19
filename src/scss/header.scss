@@ -10,12 +10,11 @@
 
 .container-nav {
   border-bottom: 3px solid $_border_color;
-  width: 320px;
+  max-width: 320px;
   background: $_header_bg;
-
   @include media(desktop) {
     border-bottom: unset;
-    width: 1200px;
+    max-width: 1200px;
     background: $_transparent_color;
   }
 }
@@ -135,20 +134,16 @@
 /* MOBILE NAVIGATION MENU */
 .burger-navbar {
   position: fixed;
-  padding: 24px 12px;
+  padding: 24px 16px;
   border-radius: 0 0 0 $border-extra-thick;
-  width: 150px;
-  height: 376px;
+  width: 160px;
   top: 60px;
-  left: 53%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   background-color: $_navbar_bg;
   transform: translateY(-120%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include media(tablet) {
-    left: 51%;
-  }
 
   @include media(desktop) {
     display: none;
