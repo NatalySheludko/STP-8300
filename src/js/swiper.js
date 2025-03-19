@@ -4,14 +4,12 @@ import 'swiper/swiper-bundle.css';
 document.addEventListener('DOMContentLoaded', function () {
   const breakpoints = 1200;
 
-  // Массив для всіх конфігурацій
   const swipersConfig = [
     { containerClass: '.reviews-swiper', swiperInstance: null },
     { containerClass: '.custom-swiper', swiperInstance: null },
     { containerClass: '.gallery-swiper', swiperInstance: null },
   ];
 
-  // Функція для ініціалізації свайперів
   function initSwiper(swiperContainer, swiperInstance) {
     const isMobile = window.innerWidth < breakpoints;
 
@@ -37,13 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
     return swiperInstance;
   }
 
-  // Ініціалізація всіх свайперів
   swipersConfig.forEach(config => {
     const swiperContainer = document.querySelector(config.containerClass);
     config.swiperInstance = initSwiper(swiperContainer, config.swiperInstance);
   });
 
-  // Оновлення свайперів при зміні розміру
   window.addEventListener('resize', function () {
     swipersConfig.forEach(config => {
       const swiperContainer = document.querySelector(config.containerClass);
