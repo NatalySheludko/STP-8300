@@ -11,7 +11,7 @@
   background-image: url('../img/benefits/benefits-mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom 35%;
   max-width: 320px;
   margin: 0 auto;
   padding-top: 35px;
@@ -21,6 +21,7 @@
   }
 
   @include media(desktop) {
+    background-position: center;
     max-width: 1200px;
 
     @include mq(desktop, min) {
