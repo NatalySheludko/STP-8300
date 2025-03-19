@@ -7,6 +7,7 @@
 @import './benefits.scss';
 @import './feature-keys.scss';
 @import './about.scss';
+@import './common-swiper-styles.scss';
 @import './how-play.scss';
 @import './faq.scss';
 @import './reviews.scss';
@@ -32,6 +33,7 @@ body {
   position: relative;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
   @include scroll-bar;
 }
 
@@ -77,9 +79,10 @@ body::after {
 }
 
 h1 {
+  text-align: center;
+
   @include font-weight(bold);
   @include font(24);
-  text-align: center;
 
   @include media(desktop) {
     @include font(40);
@@ -88,10 +91,11 @@ h1 {
 }
 
 h2 {
-  @include font-weight(bold);
-  @include font(34);
   text-align: center;
   margin-bottom: 25px;
+
+  @include font-weight(bold);
+  @include font(34);
 
   @include media(desktop) {
     @include font(38);
@@ -101,9 +105,10 @@ h2 {
 }
 
 h3 {
+  color: $_white_text_color;
+
   @include font-weight(medium);
   @include font(14);
-  color: $_white_text_color;
 
   @include media(desktop) {
     @include font(25);
@@ -114,85 +119,6 @@ p {
   @include font-weight(normal);
   @include font(12);
 
-  @include media(desktop) {
-    @include font(25);
-  }
-}
-
-/* COMMON STYLES FOR PRIVACY/COOKIES/TERMS */
-.container-info {
-  max-width: $_container-mobile;
-  padding: 0px 10px;
-  margin: 0 auto;
-  @include media(desktop) {
-    max-width: $_container-desktop;
-    padding: 0 197px 0 198px;
-  }
-}
-
-.section-info {
-  padding: 20px 0;
-  @include media(desktop) {
-    padding: 25px 0;
-  }
-}
-
-.section-spacing {
-  padding-bottom: 40px;
-
-  @include media(desktop) {
-    padding-bottom: 50px;
-  }
-}
-
-/* FOOTER STYLES */
-.footer {
-  background-color: $_dark_bg;
-}
-
-.footer-container {
-  padding-top: 18px;
-  padding-bottom: 20px;
-  @include media(desktop) {
-    padding-top: 20px;
-    padding-bottom: 41px;
-  }
-}
-
-.nav-footer {
-  position: relative;
-}
-
-.list-footer {
-  display: flex;
-  margin-bottom: 22px;
-  row-gap: 23px;
-  @include media(desktop) {
-    margin-bottom: 36px;
-    row-gap: unset;
-  }
-}
-
-.footer-item-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  @include media(desktop) {
-    position: relative;
-    right: unset;
-    top: unset;
-  }
-}
-
-.title-footer {
-  text-align: start;
-}
-
-.text-footer {
-  color: $_white_text_color;
-  text-align: center;
-  @include font-weight(medium);
-  @include font(14);
   @include media(desktop) {
     @include font(25);
   }

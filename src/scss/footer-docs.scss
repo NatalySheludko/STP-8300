@@ -1,8 +1,38 @@
+/* COMMON STYLES FOR PRIVACY/COOKIES/TERMS */
+.container-info {
+  max-width: $_container-mobile;
+  padding: 0px 10px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    max-width: $_container-desktop;
+    padding: 0 197px 0 198px;
+  }
+}
+
+.section-info {
+  padding: 20px 0;
+
+  @include media(desktop) {
+    padding: 25px 0;
+  }
+}
+
+.section-spacing {
+  padding-bottom: 40px;
+
+  @include media(desktop) {
+    padding-bottom: 50px;
+  }
+}
+
+/* LINK STYLES */
 .privacy-link {
   display: flex;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 3px;
+
   @include font-weight(semibold);
   @include font(20);
 
@@ -17,13 +47,15 @@
   margin-right: 15px;
 }
 
+/* PRIVACY/COOKIES/TERMS CONTENT STYLES */
 .title-pages {
-  @include font-weight(bold);
-  @include font(34);
   text-align: start;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
+
+  @include font-weight(bold);
+  @include font(34);
 
   @include media(desktop) {
     padding-top: 98px;
@@ -51,6 +83,7 @@
   position: relative;
   padding-left: 20px;
   display: inline-flex;
+
   @include media(desktop) {
     padding-left: 45px;
   }
@@ -64,6 +97,7 @@
   transform: translateY(-50%);
   @include font(34);
   color: $_dark_bg;
+
   @include media(desktop) {
     @include font(60);
     left: 20px;
@@ -73,6 +107,7 @@
 .text-list {
   list-style-type: disc;
   padding-left: 20px;
+
   @include media(desktop) {
     padding-left: 40px;
   }
@@ -80,6 +115,7 @@
 
 .text-spacing {
   margin-bottom: 30px;
+
   @include media(desktop) {
     margin-bottom: 55px;
   }

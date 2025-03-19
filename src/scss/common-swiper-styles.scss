@@ -1,0 +1,37 @@
+.swiper {
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  @include media(desktop) {
+    display: block;
+    overflow: visible;
+  }
+}
+
+/* SWIPER-PAGINATION */
+.swiper-pagination {
+  margin-top: 15px;
+  position: relative !important;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  opacity: 1 !important;
+  border: 1px solid $_dark_bg !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $_dark_bg !important;
+}

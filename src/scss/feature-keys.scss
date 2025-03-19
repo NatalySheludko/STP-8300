@@ -14,12 +14,15 @@
   left: 5px;
   top: 25%;
   transform: translateY(-50%);
-  @include font(34);
   color: $_dark_bg;
+
+  @include font(34);
+
   @include media(desktop) {
-    @include font(60);
     left: 0;
     top: 40%;
+
+    @include font(60);
   }
 }
 
