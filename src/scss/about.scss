@@ -26,6 +26,7 @@
     border-radius: $border-bold;
     width: 350px;
     height: 490px;
+
     @include mq(desktop, min) {
       content: url('../img/about/about-desktop.png');
     }
@@ -37,6 +38,7 @@
 
 .about-text {
   padding: 0 4px;
+
   @include media(desktop) {
     width: 597px;
     padding-bottom: 104px;
