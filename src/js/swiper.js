@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         swiperInstance = new Swiper('.swiper', {
           slidesPerView: 1,
           loop: true,
+          spaceBetween: 16,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
