@@ -36,7 +36,7 @@
 
 .review-slide {
   padding: 30px 28px 0px 29px;
-  height: 226px;
+  height: 196px;
   width: 243px;
   border-radius: $border-bold;
   backdrop-filter: blur(43px);
@@ -45,7 +45,7 @@
 
   @include media(desktop) {
     padding: 30px 31px 0px 31px;
-    height: 256px;
+    height: 226px;
   }
 }
 
