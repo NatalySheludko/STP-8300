@@ -1,6 +1,6 @@
 .swiper {
   @include media(desktop) {
-    overflow: visible !important;
+    overflow: visible;
   }
 }
 
@@ -8,11 +8,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // overflow: hidden;
 
   @include media(desktop) {
     display: block;
-    // overflow: visible;
   }
 }
 
