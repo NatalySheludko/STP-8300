@@ -23,9 +23,10 @@
 }
 
 .accordion-text {
+  color: $_icon_stroke_color;
+
   @include font-weight(medium);
   @include font(12, 1.5);
-  color: $_icon_stroke_color;
 
   @include media(desktop) {
     @include font(25);
@@ -36,13 +37,14 @@
   width: 100%;
   padding: 0;
   background-color: $_transparent_color;
-  @include font-weight(medium);
-  @include font(12, 1.5);
   color: $_icon_stroke_color;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include font-weight(medium);
+  @include font(12, 1.5);
 
   @include media(desktop) {
     @include font(25);

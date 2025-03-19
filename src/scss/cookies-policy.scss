@@ -6,18 +6,22 @@
   width: 293px;
   margin: 0 auto 15px auto;
   color: $_main_color;
+
   @include font(34);
   @include font-weight(bold);
+
   @include media(desktop) {
     width: auto;
     margin-bottom: 25px;
     padding-left: 0;
+
     @include font(38);
   }
 }
 
 .second-title-size {
   width: 223px;
+
   @include media(desktop) {
     width: auto;
   }
@@ -25,6 +29,7 @@
 
 .second-title-next-size {
   width: 274px;
+
   @include media(desktop) {
     width: auto;
   }
@@ -32,6 +37,7 @@
 
 .title-next-size {
   width: 274px;
+
   @include media(desktop) {
     width: auto;
   }
@@ -42,7 +48,9 @@
   justify-content: center;
   align-items: center;
   text-align: start;
+
   @include font(38);
+
   @include media(desktop) {
     @include font(50);
   }
@@ -50,6 +58,7 @@
 
 .block-spacing {
   margin-bottom: 40px;
+
   @include media(desktop) {
     margin-bottom: 50px;
   }

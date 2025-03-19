@@ -15,6 +15,7 @@
 
 .privacy-title-size {
   width: 236px;
+
   @include media(desktop) {
     width: auto;
   }
@@ -22,6 +23,7 @@
 
 .privacy-next-title-size {
   width: 191px;
+
   @include media(desktop) {
     width: auto;
   }
@@ -29,6 +31,7 @@
 
 .text-small-spacing {
   margin-bottom: 10px;
+
   @include media(desktop) {
     margin-bottom: 25px;
   }

@@ -9,6 +9,7 @@
   margin-bottom: 15px;
   border-radius: $border-medium;
   background-color: $_common_img_bg;
+
   @include media(desktop) {
     margin-bottom: 25px;
     border-radius: $border-bold;
@@ -19,6 +20,7 @@
 
 .slide1 {
   content: url('../img/how-play/how-play-mobile1.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/how-play/how-play-mobile1@2x.png');
   }
@@ -35,6 +37,7 @@
 
 .slide2 {
   content: url('../img/how-play/how-play-mobile2.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/how-play/how-play-mobile2@2x.png');
   }
@@ -51,9 +54,11 @@
 
 .slide3 {
   content: url('../img/how-play/how-play-mobile3.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/how-play/how-play-mobile3@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/how-play/how-play-desktop3.png');
@@ -66,9 +71,11 @@
 
 .slide4 {
   content: url('../img/how-play/how-play-mobile4.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/how-play/how-play-mobile4@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/how-play/how-play-desktop4.png');
@@ -81,9 +88,11 @@
 
 .slide5 {
   content: url('../img/how-play/how-play-mobile5.png');
+
   @include mq(mobile, min, true) {
     content: url('../img/how-play/how-play-mobile5@2x.png');
   }
+
   @include media(desktop) {
     @include mq(desktop, min) {
       content: url('../img/how-play/how-play-desktop5.png');
@@ -91,21 +100,6 @@
     @include mq(desktop, min, true) {
       content: url('../img/how-play/how-play-desktop5@2x.png');
     }
-  }
-}
-
-.swiper {
-  @include media(desktop) {
-    display: none;
-  }
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include media(desktop) {
-    display: block;
   }
 }
 
@@ -137,30 +131,10 @@
 
 .slide-text {
   text-align: center;
+
   @include media(desktop) {
     position: absolute;
     width: 455px;
     left: -15%;
   }
-}
-
-.swiper-pagination {
-  position: relative !important;
-  @include media(desktop) {
-    display: none;
-  }
-}
-
-.play-swiper-pagination {
-  margin-top: 15px;
-}
-
-.swiper-pagination-bullet {
-  background-color: transparent !important;
-  opacity: 1 !important;
-  border: 1px solid $_dark_bg !important;
-}
-
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: $_dark_bg !important;
 }
