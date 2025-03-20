@@ -31,10 +31,11 @@
   font-size: #{$_fsz}px;
 
   @if $_lnh != null {
-    @if $_lnh > 10 {
-      line-height: math.div(math.round(math.div($_lnh, $_fsz) * 100), 100);
+    @if type-of($_lnh) == number and unitless($_lnh) and $_lnh > 10 {
+      $lnh-value: math.div($_lnh, 100);
+      line-height: #{$lnh-value};
     } @else {
-      line-height: #{math.div($_lnh * 100, 100)};
+      line-height: #{$_lnh};
     }
   }
 }

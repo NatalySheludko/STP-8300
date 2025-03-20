@@ -26,7 +26,7 @@
   color: $_icon_stroke_color;
 
   @include font-weight(medium);
-  @include font(12, 1.5);
+  @include font(12, 150);
 
   @include media(desktop) {
     @include font(25);

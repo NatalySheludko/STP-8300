@@ -40,7 +40,8 @@
 }
 
 .feature-menu-item-text {
+  @include font(12, 141);
   @include media(desktop) {
-    @include font(24, 1.41);
+    @include font(24, null);
   }
 }
