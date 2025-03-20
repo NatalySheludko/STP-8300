@@ -14,6 +14,7 @@
   }
 
   @include media(desktop) {
+    top: -75px;
     max-width: 1200px;
     height: 700px;
 
