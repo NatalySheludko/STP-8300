@@ -1,10 +1,15 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99999;
+
   @include media(desktop) {
-    position: fixed;
     top: 30px;
     left: 0;
-    width: 100%;
-    z-index: 1000;
+    transform: none;
   }
 }
 
