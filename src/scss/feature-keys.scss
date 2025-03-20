@@ -42,6 +42,7 @@
 .feature-menu-item-text {
   @include font(12, 141);
   @include media(desktop) {
-    @include font(24, null);
+    @include font(24);
+    line-height: normal;
   }
 }

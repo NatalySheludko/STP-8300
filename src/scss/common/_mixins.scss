@@ -31,12 +31,7 @@
   font-size: #{$_fsz}px;
 
   @if $_lnh != null {
-    @if type-of($_lnh) == number and unitless($_lnh) and $_lnh > 10 {
-      $lnh-value: math.div($_lnh, 100);
-      line-height: #{$lnh-value};
-    } @else {
-      line-height: #{$_lnh};
-    }
+    line-height: #{math.div($_lnh, 100)};
   }
 }
 
