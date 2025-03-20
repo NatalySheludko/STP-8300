@@ -1,9 +1,10 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 50%;
   width: 100%;
   z-index: 99999;
+  transform: translateX(-50%);
 
   @include media(desktop) {
     top: 30px;
