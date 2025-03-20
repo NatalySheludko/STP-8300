@@ -45,13 +45,8 @@
 
   @include media(desktop) {
     padding: 30px 31px 0px 31px;
+    width: 258px;
     height: 226px;
-  }
-}
-
-.swiper-slide {
-  @include media(desktop) {
-    max-width: 320px;
   }
 }
 

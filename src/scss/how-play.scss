@@ -6,6 +6,7 @@
   margin: 0 auto;
   width: 280px;
   height: 392px;
+  object-fit: cover;
   margin-bottom: 15px;
   border-radius: $border-medium;
   background-color: $_common_img_bg;
@@ -109,23 +110,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 70px;
+    align-items: center;
     column-gap: 190px;
+    row-gap: 70px;
   }
 }
 
 .custom-slide {
   @include media(desktop) {
     position: relative;
-    width: calc(50% - 15px);
-    max-width: 350px;
+    width: calc((100% - 190px) / 2);
+    width: auto;
+    min-width: 350px;
     margin-bottom: 70px;
-  }
-}
-
-.custom-slide:nth-child(5) {
-  @include media(desktop) {
-    flex-basis: 100%;
   }
 }
 

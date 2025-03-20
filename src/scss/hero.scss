@@ -135,7 +135,7 @@
 }
 
 .overlay-block.visible {
-  transform: translateX(-50.1%) translateY(-10%);
+  transform: translateX(-50.1%) translateY(0%);
   opacity: 1;
   visibility: visible;
 
@@ -153,6 +153,8 @@
 
   @include media(desktop) {
     margin-bottom: 6px;
+    text-align: start;
+    padding-left: 0;
 
     @include font(64);
   }
@@ -162,12 +164,12 @@
   color: $_dark_bg;
   margin-bottom: 40px;
 
-  @include font(12, 1.5);
+  @include font(12, 150);
 
   @include media(desktop) {
     margin-bottom: 60px;
 
-    @include font(24, 1.5);
+    @include font(24);
   }
 }
 

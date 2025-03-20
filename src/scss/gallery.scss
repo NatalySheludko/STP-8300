@@ -10,6 +10,7 @@
   width: 280px;
   height: 157px;
   margin-bottom: 18px;
+  object-fit: cover;
   border-radius: $border-thin;
   background-color: $_common_img_bg;
 
@@ -100,7 +101,7 @@
 
 .gallery-custom-slide {
   @include media(desktop) {
-    width: calc(50% - 15px);
+    width: calc((100% - 50px) / 2);
     max-width: 545px;
   }
 }
