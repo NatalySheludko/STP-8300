@@ -26,19 +26,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  background-color: $_primary_bg;
-  color: $_main_color;
-  font-family: $_font_main;
+html {
   position: relative;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  @include scroll-bar;
 }
 
-body::before,
-body::after {
+html::before,
+html::after {
   content: '';
   position: absolute;
   top: 0;
@@ -49,14 +42,21 @@ body::after {
   z-index: -1;
 }
 
-body::before {
+html::before {
   left: 0;
   background: linear-gradient(to right, $_gradient, $_primary_bg);
 }
 
-body::after {
+html::after {
   right: 0;
   background: linear-gradient(to left, $_gradient, $_primary_bg);
+}
+
+body {
+  background-color: $_primary_bg;
+  color: $_main_color;
+  font-family: $_font_main;
+  @include scroll-bar;
 }
 
 .container {

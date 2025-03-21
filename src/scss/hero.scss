@@ -29,12 +29,9 @@
 }
 
 .content-position {
-  position: absolute;
-  top: 404px;
+  padding-top: 404px;
 
   @include media(desktop) {
-    position: unset;
-    top: unset;
     display: flex;
     flex-direction: column;
     justify-content: center;
